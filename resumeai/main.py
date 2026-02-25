@@ -355,26 +355,26 @@ label {
 .stTextInput > div > div > input,
 .stTextArea  > div > div > textarea,
 .stNumberInput > div > div > input {
-    background: rgba(255,255,255,0.04) !important;
+    background: #000000 !important;
     border: 1px solid var(--border) !important;
     border-radius: var(--r-md) !important;
     color: var(--text-hi) !important;
     padding: 12px 16px !important;
     font-family: var(--font-b) !important; font-size: 0.9rem !important;
-    caret-color: #000000 !important; outline: none !important;
+    caret-color: #ffffff !important; outline: none !important;
 }
 .stTextInput > div > div > input:focus,
 .stTextArea  > div > div > textarea:focus,
 .stNumberInput > div > div > input:focus {
     border-color: rgba(59,130,246,0.5) !important;
-    background: rgba(59,130,246,0.05) !important;
-    box-shadow: 0 0 0 3px rgba(59,130,246,0.1) !important;
-    caret-color: #000000 !important;
+    background: #000000 !important;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.15) !important;
+    caret-color: #ffffff !important;
 }
 .stTextInput > div > div > input::placeholder,
 .stTextArea  > div > div > textarea::placeholder { color: var(--text-lo) !important; }
 .stSelectbox > div > div {
-    background: rgba(255,255,255,0.04) !important;
+    background: #000000 !important;
     border: 1px solid var(--border) !important;
     border-radius: var(--r-md) !important; color: var(--text-hi) !important;
 }
