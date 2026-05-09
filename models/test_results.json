@@ -1,0 +1,185 @@
+[
+  {
+    "job_title": "AI Generalist (Entry-Level) - Freelance AI Trainer Project",
+    "job_company": "Invisible Agency",
+    "candidates": [
+      {
+        "final_score": 40.14,
+        "semantic_score": 41.62,
+        "skills_score": 41.62,
+        "experience_score": 50,
+        "title_score": 14.29,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_2",
+        "resume_category": "Data Science"
+      },
+      {
+        "final_score": 37.78,
+        "semantic_score": 38.47,
+        "skills_score": 38.47,
+        "experience_score": 50,
+        "title_score": 14.29,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_1",
+        "resume_category": "Data Science"
+      },
+      {
+        "final_score": 32.13,
+        "semantic_score": 30.94,
+        "skills_score": 30.94,
+        "experience_score": 50,
+        "title_score": 14.29,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_4",
+        "resume_category": "Data Science"
+      },
+      {
+        "final_score": 29.1,
+        "semantic_score": 28.8,
+        "skills_score": 28.8,
+        "experience_score": 50,
+        "title_score": 0.0,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_0",
+        "resume_category": "Data Science"
+      },
+      {
+        "final_score": 27.82,
+        "semantic_score": 27.09,
+        "skills_score": 27.09,
+        "experience_score": 50,
+        "title_score": 0.0,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_3",
+        "resume_category": "Data Science"
+      }
+    ]
+  },
+  {
+    "job_title": "Entry Level English Specialist (US Only) - Freelance AI Trainer Project",
+    "job_company": "Invisible Agency",
+    "candidates": [
+      {
+        "final_score": 40.48,
+        "semantic_score": 42.76,
+        "skills_score": 42.76,
+        "experience_score": 50,
+        "title_score": 9.09,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_1",
+        "resume_category": "Data Science"
+      },
+      {
+        "final_score": 40.32,
+        "semantic_score": 42.55,
+        "skills_score": 42.55,
+        "experience_score": 50,
+        "title_score": 9.09,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_2",
+        "resume_category": "Data Science"
+      },
+      {
+        "final_score": 34.6,
+        "semantic_score": 34.92,
+        "skills_score": 34.92,
+        "experience_score": 50,
+        "title_score": 9.09,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_4",
+        "resume_category": "Data Science"
+      },
+      {
+        "final_score": 32.1,
+        "semantic_score": 32.8,
+        "skills_score": 32.8,
+        "experience_score": 50,
+        "title_score": 0.0,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_0",
+        "resume_category": "Data Science"
+      },
+      {
+        "final_score": 30.43,
+        "semantic_score": 30.57,
+        "skills_score": 30.57,
+        "experience_score": 50,
+        "title_score": 0.0,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_3",
+        "resume_category": "Data Science"
+      }
+    ]
+  },
+  {
+    "job_title": "AI/ML Engineer-5",
+    "job_company": "Realign LLC",
+    "candidates": [
+      {
+        "final_score": 42.93,
+        "semantic_score": 47.25,
+        "skills_score": 47.25,
+        "experience_score": 50,
+        "title_score": 0.0,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_1",
+        "resume_category": "Data Science"
+      },
+      {
+        "final_score": 40.68,
+        "semantic_score": 44.23,
+        "skills_score": 44.23,
+        "experience_score": 50,
+        "title_score": 0.0,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_2",
+        "resume_category": "Data Science"
+      },
+      {
+        "final_score": 33.71,
+        "semantic_score": 34.95,
+        "skills_score": 34.95,
+        "experience_score": 50,
+        "title_score": 0.0,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_4",
+        "resume_category": "Data Science"
+      },
+      {
+        "final_score": 33.43,
+        "semantic_score": 34.58,
+        "skills_score": 34.58,
+        "experience_score": 50,
+        "title_score": 0.0,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_0",
+        "resume_category": "Data Science"
+      },
+      {
+        "final_score": 32.6,
+        "semantic_score": 33.47,
+        "skills_score": 33.47,
+        "experience_score": 50,
+        "title_score": 0.0,
+        "matched_skills": [],
+        "missing_skills": [],
+        "resume_id": "kaggle_resume_3",
+        "resume_category": "Data Science"
+      }
+    ]
+  }
+]
