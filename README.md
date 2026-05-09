@@ -270,7 +270,6 @@ The same architecture powers recommendation systems at LinkedIn, Indeed, and sim
 **Abdul Khaliq**
 - 🌐 Portfolio: [myportfolio-abdulkhaliq.vercel.app](https://myportfolio-abdulkhaliq.vercel.app)
 - 💻 GitHub: [@engrrabdulkhaliq001](https://github.com/engrrabdulkhaliq001)
-- 💼 LinkedIn: [linkedin.com/in/abdul-khaliq](https://linkedin.com/in/abdul-khaliq)
 
 ---
 
