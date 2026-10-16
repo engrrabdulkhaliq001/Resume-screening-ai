@@ -267,27 +267,97 @@ label {
     text-transform: uppercase !important; font-family: var(--font-d) !important;
     text-shadow: 0 1px 6px rgba(0,0,0,0.9) !important;
 }
-.stTextInput > div > div > input,
-.stTextArea  > div > div > textarea,
-.stNumberInput > div > div > input {
-    background: #000000 !important; border: 1px solid var(--border) !important;
-    border-radius: var(--r-md) !important; color: var(--text-hi) !important;
-    padding: 12px 16px !important; font-family: var(--font-b) !important; font-size: 0.9rem !important;
-    caret-color: #ffffff !important; outline: none !important;
+/* ── Form Inputs & Textarea Visibility ── */
+textarea,
+div[data-baseweb="textarea"],
+div[data-baseweb="textarea"] > div,
+.stTextArea textarea,
+.stTextArea div[data-baseweb="textarea"],
+.stTextArea [data-baseweb="base-input"],
+.stTextArea > div > div > textarea {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    background: rgba(15, 23, 42, 0.6) !important;
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: var(--r-md) !important;
+    caret-color: #FFFFFF !important;
+    font-family: var(--font-b) !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    outline: none !important;
 }
-.stTextInput > div > div > input:focus,
-.stTextArea  > div > div > textarea:focus,
-.stNumberInput > div > div > input:focus {
-    border-color: rgba(59,130,246,0.5) !important; background: #000000 !important;
-    box-shadow: 0 0 0 3px rgba(59,130,246,0.15) !important; caret-color: #ffffff !important;
+
+textarea:focus,
+div[data-baseweb="textarea"]:focus-within,
+.stTextArea textarea:focus,
+.stTextArea div[data-baseweb="textarea"]:focus-within {
+    border-color: rgba(59, 130, 246, 0.6) !important;
+    background: rgba(15, 23, 42, 0.8) !important;
+    background-color: rgba(15, 23, 42, 0.8) !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    caret-color: #FFFFFF !important;
 }
-.stTextInput > div > div > input::placeholder,
-.stTextArea  > div > div > textarea::placeholder { color: var(--text-lo) !important; }
-.stSelectbox > div > div {
-    background: #000000 !important; border: 1px solid var(--border) !important;
-    border-radius: var(--r-md) !important; color: var(--text-hi) !important;
+
+textarea::placeholder,
+.stTextArea textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.5) !important;
 }
-.stSelectbox > div > div > div { color: var(--text-hi) !important; }
+
+/* Text & Number Inputs */
+.stTextInput input,
+.stTextInput div[data-baseweb="input"],
+.stTextInput div[data-baseweb="input"] > div,
+.stNumberInput input,
+.stNumberInput div[data-baseweb="input"],
+.stNumberInput div[data-baseweb="input"] > div {
+    background: rgba(15, 23, 42, 0.6) !important;
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: var(--r-md) !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    caret-color: #FFFFFF !important;
+    font-family: var(--font-b) !important;
+    font-size: 0.9rem !important;
+    padding: 12px 16px !important;
+    outline: none !important;
+}
+
+.stTextInput input:focus,
+.stTextInput div[data-baseweb="input"]:focus-within,
+.stNumberInput input:focus,
+.stNumberInput div[data-baseweb="input"]:focus-within {
+    border-color: rgba(59, 130, 246, 0.6) !important;
+    background: rgba(15, 23, 42, 0.8) !important;
+    background-color: rgba(15, 23, 42, 0.8) !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+    caret-color: #FFFFFF !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+.stTextInput input::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.stSelectbox > div > div,
+.stSelectbox div[data-baseweb="select"] {
+    background: rgba(15, 23, 42, 0.6) !important;
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: var(--r-md) !important;
+    color: #FFFFFF !important;
+}
+.stSelectbox > div > div > div,
+.stSelectbox [data-testid="stMarkdownContainer"] {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
 .stSelectbox svg { color: var(--text-mid) !important; }
 
 .stButton > button {
@@ -334,6 +404,57 @@ button[data-testid="stBaseButton-secondary"][aria-label=""] {
 button[data-testid="stBaseButton-secondary"][aria-label=""]:hover {
     background: #1a1a2e !important; border-color: rgba(99,102,241,0.8) !important;
     box-shadow: 0 4px 22px rgba(99,102,241,0.45) !important; color: #ffffff !important;
+}
+
+/* ── Uploaded Resumes List Container Styling ── */
+[data-testid="stFileUploaderFileData"],
+[data-testid="stFileUploaderFile"],
+[data-testid="stUploadedFile"],
+section[data-testid="stFileUploader"] ul,
+section[data-testid="stFileUploader"] li,
+.stFileUploader section > div,
+.stFileUploader div[role="listitem"],
+div[data-testid="stFileUploaderFile"],
+div[data-testid="stFileUploaderFileData"] {
+    background: rgba(15, 23, 42, 0.6) !important;
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: var(--r-md) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    margin-top: 6px !important;
+    padding: 8px 12px !important;
+}
+
+[data-testid="stFileUploaderFileData"] *,
+[data-testid="stFileUploaderFile"] *,
+[data-testid="stUploadedFile"] *,
+section[data-testid="stFileUploader"] li *,
+[data-testid="stFileUploaderFileName"],
+[data-testid="stFileUploaderFileStatus"],
+.stFileUploader [data-testid="stFileUploaderFileName"],
+.stFileUploader [data-testid="stFileUploaderFileStatus"],
+.stFileUploader small,
+.stFileUploader span,
+.stFileUploader p {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* File delete / clear icon button inside file preview card */
+[data-testid="stFileUploaderDeleteBtn"],
+[data-testid="stFileUploaderFileData"] button,
+[data-testid="stFileUploaderFile"] button {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    cursor: pointer !important;
+}
+[data-testid="stFileUploaderDeleteBtn"]:hover,
+[data-testid="stFileUploaderFileData"] button:hover,
+[data-testid="stFileUploaderFile"] button:hover {
+    color: #ef4444 !important;
 }
 
 .illus-zone {
@@ -616,8 +737,8 @@ if page == "hiw":
 # ═══════════════════════════════════════════════════════
 #  HOME
 # ═══════════════════════════════════════════════════════
-resumes_n  = api_data.get("resumes_indexed", 0)   # ← fixed key
-jd_display = api_data.get("jd_title") or "None"
+resumes_n  = st.session_state.get("resumes_indexed_count", api_data.get("resumes_indexed", 0))   # ← fixed key
+jd_display = st.session_state.get("active_jd_title") or api_data.get("jd_title") or "None"
 shortlisted = st.session_state.get("shortlisted", 0)
 model_name  = api_data.get("model", "")
 
@@ -690,24 +811,27 @@ with left:
     with c1: jd_exp = st.number_input("Min Experience (yrs)", min_value=0, max_value=20, value=0, key="jd_e")
     with c2: jd_edu = st.selectbox("Education Level", ["not specified","diploma","associate","bachelors","masters","phd"], key="jd_edu")
 
-    if st.button("💼  Upload Job Description", type="primary", key="btn_jd"):
+    btn_jd_clicked = st.button("💼  Upload Job Description", type="primary", key="btn_jd")
+    jd_status_area = st.empty()
+    if btn_jd_clicked:
         if not jd_title or not jd_desc:
-            st.error("⚠️ Job title and description are required!")
+            jd_status_area.error("⚠️ Job title and description are required!")
         else:
-            with st.spinner("Uploading..."):
-                res = api_post("/upload-jd", json={
-                    "title": jd_title,
-                    "description": jd_desc,
-                    "skills_required": [s.strip() for s in jd_skills.split(",") if s.strip()],
-                    "experience_years": jd_exp if jd_exp > 0 else None,
-                    "education": jd_edu
-                })
-            if res.get("jd_id"):
-                st.success(f"✅ Uploaded: **{jd_title}**")
-                st.markdown('<div class="upload-bar"></div>', unsafe_allow_html=True)
-                st.rerun()
-            else:
-                st.error(res.get("error", "Upload failed"))
+            with jd_status_area.container():
+                with st.spinner("Uploading & processing Job Description..."):
+                    res = api_post("/upload-jd", json={
+                        "title": jd_title,
+                        "description": jd_desc,
+                        "skills_required": [s.strip() for s in jd_skills.split(",") if s.strip()],
+                        "experience_years": jd_exp if jd_exp > 0 else None,
+                        "education": jd_edu
+                    })
+                if res.get("jd_id"):
+                    st.session_state["active_jd_title"] = jd_title
+                    st.success("✅ Job Description uploaded successfully!")
+                    st.markdown('<div class="upload-bar"></div>', unsafe_allow_html=True)
+                else:
+                    st.error(res.get("error", "Upload failed"))
 
 with right:
     st.markdown("""
@@ -750,27 +874,33 @@ with right:
     if files:
         st.caption(f"📎 {len(files)} file(s) selected")
 
-    if st.button("📤  Upload All Resumes", type="primary", key="btn_ur"):
+    btn_ur_clicked = st.button("📤  Upload All Resumes", type="primary", key="btn_ur")
+    ur_status_area = st.empty()
+    if btn_ur_clicked:
         if not files:
-            st.warning("⚠️ Please select resume files first")
+            ur_status_area.warning("⚠️ Please select resume files first")
         else:
-            prog     = st.progress(0)
-            uploaded = 0
-            for i, f in enumerate(files):
-                with st.spinner(f"Uploading {f.name}..."):
-                    f.seek(0)
-                    res = api_post("/upload-resume",
-                                   files={"file": (f.name, f.read(), "application/octet-stream")})
-                if res.get("resume_id"):
-                    p = res.get("parsed", {})
-                    st.success(f"✅ {p.get('name', f.name)}")
-                    uploaded += 1
-                else:
-                    st.error(f"❌ {f.name}: {res.get('error','Failed')}")
-                prog.progress((i + 1) / len(files))
-            if uploaded:
-                st.markdown('<div class="upload-bar"></div>', unsafe_allow_html=True)
-            st.rerun()
+            with ur_status_area.container():
+                with st.spinner("Parsing & indexing resumes into ChromaDB..."):
+                    prog     = st.progress(0)
+                    uploaded = 0
+                    for i, f in enumerate(files):
+                        f.seek(0)
+                        res = api_post("/upload-resume",
+                                       files={"file": (f.name, f.read(), "application/octet-stream")})
+                        if res.get("resume_id"):
+                            p = res.get("parsed", {})
+                            cname = p.get('name') or f.name
+                            st.write(f"✓ Indexed: **{cname}**")
+                            uploaded += 1
+                        else:
+                            st.error(f"❌ {f.name}: {res.get('error','Failed')}")
+                        prog.progress((i + 1) / len(files))
+                    if uploaded:
+                        current_n = st.session_state.get("resumes_indexed_count", resumes_n)
+                        st.session_state["resumes_indexed_count"] = current_n + uploaded
+                        st.success(f"✅ {uploaded} resumes processed and indexed successfully!")
+                        st.markdown('<div class="upload-bar"></div>', unsafe_allow_html=True)
 
 # ─── SCORE + CLEAR ───────────────────────────────────
 st.markdown("<br>", unsafe_allow_html=True)
@@ -787,27 +917,29 @@ with cc:
         st.rerun()
 
 # ─── SCORE BUTTON LOGIC ──────────────────────────────
+score_status_area = st.empty()
 if score_btn:
-    with st.spinner("⚡ Groq LLaMA 3 ranking candidates..."):
-        data = api_get("/ranked-candidates")
+    with score_status_area.container():
+        with st.spinner("Searching vectors, reranking & evaluating candidates with LLM..."):
+            data = api_get("/ranked-candidates")
 
-    # Handle errors
-    if not data:
-        st.error("❌ No response from backend. Is the server running?")
-    elif data.get("detail"):
-        st.warning(f"⚠️ {data['detail']}")
-    elif data.get("ranked_candidates") is not None:
-        # ── SUCCESS — save to session state, NO st.rerun() here ──
-        st.session_state["results"]     = data
-        st.session_state["shortlisted"] = data.get("shortlisted", 0)
-        # Show success message inline
-        total = len(data.get("ranked_candidates", []))
-        if total == 0:
-            st.info("ℹ️ No candidates matched. Try uploading more resumes or relaxing the JD requirements.")
+        # Handle errors
+        if not data:
+            st.error("❌ No response from backend. Is the server running?")
+        elif data.get("detail"):
+            st.warning(f"⚠️ {data['detail']}")
+        elif data.get("ranked_candidates") is not None:
+            # ── SUCCESS — save to session state, NO st.rerun() here ──
+            st.session_state["results"]     = data
+            st.session_state["shortlisted"] = data.get("shortlisted", 0)
+            # Show success message inline
+            total = len(data.get("ranked_candidates", []))
+            if total == 0:
+                st.info("ℹ️ No candidates matched. Try uploading more resumes or relaxing the JD requirements.")
+            else:
+                st.success(f"✅ Ranked {total} candidate(s) successfully!")
         else:
-            st.success(f"✅ Ranked {total} candidate(s) successfully!")
-    else:
-        st.error(f"❌ Unexpected response: {data}")
+            st.error(f"❌ Unexpected response: {data}")
 
 # ─── RESULTS SECTION ─────────────────────────────────
 if "results" in st.session_state:

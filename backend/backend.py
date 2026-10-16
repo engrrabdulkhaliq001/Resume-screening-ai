@@ -32,6 +32,11 @@ UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 HYBRID_FETCH   = 20
 RERANK_TOP_N   = 5
 
+# Set HuggingFace cache directory to control disk usage
+os.environ["HF_HOME"] = os.path.join(os.getcwd(), "models_cache")
+os.environ["TRANSFORMERS_CACHE"] = os.path.join(os.getcwd(), "models_cache")
+os.environ["SENTENCE_TRANSFORMERS_HOME"] = os.path.join(os.getcwd(), "models_cache")
+
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 if not GROQ_API_KEY:
     raise RuntimeError("GROQ_API_KEY environment variable not set!")
