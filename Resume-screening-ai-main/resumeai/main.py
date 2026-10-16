@@ -267,34 +267,62 @@ label {
     text-transform: uppercase !important; font-family: var(--font-d) !important;
     text-shadow: 0 1px 6px rgba(0,0,0,0.9) !important;
 }
-/* ── Form Inputs & Textarea Visibility ── */
+/* ── TEXTAREA — nuclear override for all wrappers ── */
 textarea,
+textarea[class],
+div[data-baseweb="textarea"],
+div[data-baseweb="textarea"] *,
+div[data-baseweb="base-input"],
+div[data-baseweb="base-input"] *,
+[data-testid="stTextArea"],
+[data-testid="stTextArea"] *,
+.stTextArea,
+.stTextArea * {
+    caret-color: #FFFFFF !important;
+}
+
+textarea,
+textarea[class],
 div[data-baseweb="textarea"],
 div[data-baseweb="textarea"] > div,
+div[data-baseweb="textarea"] > div > div,
+div[data-baseweb="base-input"],
+div[data-baseweb="base-input"] > div,
+[data-testid="stTextArea"] textarea,
+[data-testid="stTextArea"] div,
+[data-testid="stTextArea"] [data-baseweb="textarea"],
 .stTextArea textarea,
-.stTextArea div[data-baseweb="textarea"],
-.stTextArea [data-baseweb="base-input"],
-.stTextArea > div > div > textarea {
+.stTextArea div,
+.stTextArea div[data-baseweb="textarea"] {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
     background: rgba(15, 23, 42, 0.6) !important;
     background-color: rgba(15, 23, 42, 0.6) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: var(--r-md) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
     caret-color: #FFFFFF !important;
-    font-family: var(--font-b) !important;
-    font-size: 0.9rem !important;
-    line-height: 1.5 !important;
     outline: none !important;
 }
 
+/* Textarea outer container border */
+.stTextArea > div > div,
+[data-testid="stTextArea"] > div > div {
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: var(--r-md) !important;
+    overflow: hidden !important;
+    background: rgba(15, 23, 42, 0.6) !important;
+    background-color: rgba(15, 23, 42, 0.6) !important;
+}
+
 textarea:focus,
-div[data-baseweb="textarea"]:focus-within,
 .stTextArea textarea:focus,
-.stTextArea div[data-baseweb="textarea"]:focus-within {
+div[data-baseweb="textarea"]:focus-within,
+div[data-baseweb="textarea"]:focus-within *,
+[data-testid="stTextArea"]:focus-within,
+[data-testid="stTextArea"]:focus-within *,
+.stTextArea > div > div:focus-within {
     border-color: rgba(59, 130, 246, 0.6) !important;
-    background: rgba(15, 23, 42, 0.8) !important;
-    background-color: rgba(15, 23, 42, 0.8) !important;
+    background: rgba(15, 23, 42, 0.85) !important;
+    background-color: rgba(15, 23, 42, 0.85) !important;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
@@ -302,59 +330,79 @@ div[data-baseweb="textarea"]:focus-within,
 }
 
 textarea::placeholder,
-.stTextArea textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.5) !important;
+.stTextArea textarea::placeholder,
+[data-testid="stTextArea"] textarea::placeholder {
+    color: rgba(255, 255, 255, 0.45) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.45) !important;
 }
 
-/* Text & Number Inputs */
+/* ── TEXT & NUMBER INPUTS ── */
+input[class],
 .stTextInput input,
+.stTextInput > div > div,
+.stTextInput > div > div > div,
 .stTextInput div[data-baseweb="input"],
 .stTextInput div[data-baseweb="input"] > div,
+.stTextInput [data-baseweb="base-input"],
+.stTextInput [data-baseweb="base-input"] > div,
+[data-testid="stTextInput"] input,
+[data-testid="stTextInput"] div[data-baseweb],
+[data-testid="stTextInput"] div[data-baseweb] > div,
 .stNumberInput input,
+.stNumberInput > div > div,
 .stNumberInput div[data-baseweb="input"],
-.stNumberInput div[data-baseweb="input"] > div {
+.stNumberInput div[data-baseweb="input"] > div,
+[data-testid="stNumberInput"] input,
+[data-testid="stNumberInput"] div[data-baseweb] {
     background: rgba(15, 23, 42, 0.6) !important;
     background-color: rgba(15, 23, 42, 0.6) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
     border-radius: var(--r-md) !important;
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
     caret-color: #FFFFFF !important;
     font-family: var(--font-b) !important;
     font-size: 0.9rem !important;
-    padding: 12px 16px !important;
     outline: none !important;
 }
 
+.stTextInput > div > div,
+[data-testid="stTextInput"] > div > div {
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: var(--r-md) !important;
+}
+
 .stTextInput input:focus,
-.stTextInput div[data-baseweb="input"]:focus-within,
+.stTextInput > div > div:focus-within,
 .stNumberInput input:focus,
-.stNumberInput div[data-baseweb="input"]:focus-within {
+.stNumberInput > div > div:focus-within,
+[data-testid="stTextInput"]:focus-within div,
+[data-testid="stNumberInput"]:focus-within div {
     border-color: rgba(59, 130, 246, 0.6) !important;
-    background: rgba(15, 23, 42, 0.8) !important;
-    background-color: rgba(15, 23, 42, 0.8) !important;
+    background: rgba(15, 23, 42, 0.85) !important;
+    background-color: rgba(15, 23, 42, 0.85) !important;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
     caret-color: #FFFFFF !important;
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
 }
 
-.stTextInput input::placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.5) !important;
+.stTextInput input::placeholder,
+[data-testid="stTextInput"] input::placeholder {
+    color: rgba(255, 255, 255, 0.45) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.45) !important;
 }
 
+/* ── SELECTBOX ── */
 .stSelectbox > div > div,
-.stSelectbox div[data-baseweb="select"] {
+.stSelectbox > div > div > div,
+.stSelectbox div[data-baseweb="select"],
+.stSelectbox div[data-baseweb="select"] > div,
+[data-testid="stSelectbox"] div[data-baseweb] {
     background: rgba(15, 23, 42, 0.6) !important;
     background-color: rgba(15, 23, 42, 0.6) !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-radius: var(--r-md) !important;
-    color: #FFFFFF !important;
-}
-.stSelectbox > div > div > div,
-.stSelectbox [data-testid="stMarkdownContainer"] {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
 }
@@ -382,13 +430,38 @@ textarea::placeholder,
     background: rgba(239,68,68,0.18) !important; border-color: rgba(239,68,68,0.4) !important;
 }
 
-.stFileUploader > div {
-    background: rgba(255,255,255,0.02) !important; border: 2px dashed var(--border) !important;
-    border-radius: var(--r-lg) !important; transition: var(--tr) !important;
+/* ── FILE UPLOADER — dropzone & container ── */
+.stFileUploader,
+.stFileUploader > div,
+.stFileUploader > div > div,
+[data-testid="stFileUploader"],
+[data-testid="stFileUploader"] > section,
+[data-testid="stFileUploader"] > section > div,
+[data-testid="stFileUploaderDropzone"],
+[data-testid="stFileUploaderDropzone"] > div,
+[data-testid="stFileUploaderDropzone"] div,
+[data-testid="stFileUploaderDropzone"] span,
+[data-testid="stFileUploaderDropzone"] small {
+    background: rgba(15, 23, 42, 0.6) !important;
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    border-radius: var(--r-md) !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
 }
-.stFileUploader > div:hover { border-color: rgba(59,130,246,0.5) !important; background: rgba(59,130,246,0.05) !important; }
-section[data-testid="stFileUploader"] small { color: var(--text-lo) !important; }
-section[data-testid="stFileUploader"] span  { color: var(--text-mid) !important; }
+
+[data-testid="stFileUploaderDropzone"]:hover {
+    border-color: rgba(59,130,246,0.6) !important;
+    background: rgba(15, 23, 42, 0.8) !important;
+    background-color: rgba(15, 23, 42, 0.8) !important;
+}
+
+[data-testid="stFileUploaderDropzone"] [data-testid="stMarkdownContainer"] p,
+[data-testid="stFileUploaderDropzone"] span,
+[data-testid="stFileUploaderDropzone"] small {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
 
 [data-testid="stFileUploaderDropzone"] button,
 .stFileUploader button,
