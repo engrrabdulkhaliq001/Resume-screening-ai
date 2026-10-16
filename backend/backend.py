@@ -23,7 +23,7 @@ from flashrank import Ranker, RerankRequest
 # ═══════════════════════════════════════════════════════════
 # Config
 # ═══════════════════════════════════════════════════════════
-GROQ_MODEL     = "llama-3.3-70b-versatile"
+GROQ_MODEL     = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 EMBED_MODEL    = "all-MiniLM-L6-v2"
 CHROMA_PATH    = "./chroma_db"
 UPLOAD_DIR     = Path("uploads/resumes")
