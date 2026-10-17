@@ -992,27 +992,17 @@ with cc:
 # ─── SCORE BUTTON LOGIC ──────────────────────────────
 score_status_area = st.empty()
 if score_btn:
-    with score_status_area.container():
-        with st.spinner("Searching vectors, reranking & evaluating candidates with LLM..."):
-            data = api_get("/ranked-candidates")
-
-        # Handle errors
-        if not data:
-            st.error("❌ No response from backend. Is the server running?")
-        elif data.get("detail"):
-            st.warning(f"⚠️ {data['detail']}")
-        elif data.get("ranked_candidates") is not None:
-            # ── SUCCESS — save to session state, NO st.rerun() here ──
-            st.session_state["results"]     = data
-            st.session_state["shortlisted"] = data.get("shortlisted", 0)
-            # Show success message inline
-            total = len(data.get("ranked_candidates", []))
-            if total == 0:
-                st.info("ℹ️ No candidates matched. Try uploading more resumes or relaxing the JD requirements.")
-            else:
-                st.success(f"✅ Ranked {total} candidate(s) successfully!")
-        else:
-            st.error(f"❌ Unexpected response: {data}")
+    with st.spinner("⚡ Groq LLaMA 3 ranking candidates..."):
+        data = api_get("/ranked-candidates")
+    if data.get("error"):    st.error(data["error"])
+    elif data.get("detail"): st.warning(data["detail"])
+    elif data.get("ranked_candidates") is not None:
+        data["total_candidates"] = data.get("sent_to_llm", data.get("total_candidates", 0))
+        st.session_state["results"]     = data
+        st.session_state["shortlisted"] = data.get("shortlisted", 0)
+        st.rerun()
+    else:
+        st.warning("No candidates found.")
 
 # ─── RESULTS SECTION ─────────────────────────────────
 if "results" in st.session_state:
